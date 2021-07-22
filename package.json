@@ -1,0 +1,31 @@
+{
+  "name": "mochi-health-checker",
+  "version": "1.0.0",
+  "description": "Mochi Heartbeat",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "MochiLab",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "dotenv": "^8.6.0",
+    "hashids": "^1.2.2",
+    "node-fetch": "^2.6.1",
+    "node-telegram-bot-api": "^0.30.0",
+    "request": "^2.87.0",
+    "s": "^0.1.1",
+    "telegraf": "^3.6.4",
+    "telegraf-ratelimit": "^2.0.0"
+  },
+  "keywords": [
+    "telegram",
+    "telegraf",
+    "es6",
+    "nodejs",
+    "node.js",
+    "telegram-bot",
+    "telegram-bots",
+    "telegram-api"
+  ]
+}
