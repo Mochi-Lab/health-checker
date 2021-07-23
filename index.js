@@ -19,15 +19,15 @@ const healthCheck = async (ctx) => {
 const intervalHealthCheck = async () => {
   try {
     const resp = await fetch(`${serverURL}/status`);
-    if (resp.status !== 200) {
+    if (resp.status === 502) {
       bot.telegram.sendMessage(process.env.CHAT_ID, process.env.DEV_MENTION);
       bot.telegram.sendMessage(process.env.CHAT_ID, '☠️☠️☠️☠️ server dead alert ☠️☠️☠️☠️');
-      bot.telegram.sendMessage(process.env.CHAT_ID, `${serverURL}`);
+      bot.telegram.sendMessage(process.env.CHAT_ID, `${serverURL}/status`);
     }
   } catch {
     bot.telegram.sendMessage(process.env.CHAT_ID, process.env.DEV_MENTION);
     bot.telegram.sendMessage(process.env.CHAT_ID, '☠️☠️☠️☠️ server dead alert ☠️☠️☠️☠️');
-    bot.telegram.sendMessage(process.env.CHAT_ID, `${serverURL}`);
+    bot.telegram.sendMessage(process.env.CHAT_ID, `${serverURL}/status`);
   }
 };
 
