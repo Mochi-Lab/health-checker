@@ -39,7 +39,7 @@ bot.start(async (ctx) => {
   healthCheck(ctx);
 });
 
-bot.command('mochistatus', async (ctx) => {
+bot.command('status', async (ctx) => {
   healthCheck(ctx);
 });
 
